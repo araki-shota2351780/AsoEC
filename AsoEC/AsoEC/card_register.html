@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カード情報登録</title>
+    <link rel="stylesheet" href="/AsoEC/css/card_register.css">
+</head>
+<body>
+    <div class="card-register-container">
+        <header class="card-register-header">
+            <h1>カード情報登録</h1>
+            <button class="close-btn" onclick="history.back()">×</button>
+        </header>
+        <main class="card-register-main">
+            <div id="checkout-summary">
+                <!-- 入力情報と合計料金がここに表示されます -->
+            </div>
+            <form id="card-register-form">
+
+                <section class="section">
+                    <h2>受け取り方法</h2>
+                    <div class="delivery-method">
+                        <label>
+                            <input type="radio" name="delivery_method" value="置き配" required> 置き配（宅配BOX）
+                        </label>
+                        <label>
+                            <input type="radio" name="delivery_method" value="対面受け取り"> 対面で受け取り
+                        </label>
+                    </div>
+                </section>
+
+                
+                
+                <section class="section">
+                    <h2>クレジットカード</h2>
+                    <input type="text" id="card-number" name="card_number" placeholder="カード番号" maxlength="16" required>
+                    <div class="card-group">
+                        <input type="text" id="expiry-date" name="expiry_date" placeholder="有効期限 (月/年)" maxlength="5" required>
+                        <input type="text" id="security-code" name="security_code" placeholder="セキュリティコード" maxlength="3" required>
+                    </div>
+                    <input type="text" id="card-holder-name" name="card_holder_name" placeholder="カードの名義人" required>
+                </section>
+                <button type="submit" class="submit-btn">次へ</button>
+            </form>
+        </main>
+    </div>
+    
+    <script src="/AsoEC/js/card_register.js"></script>
+    <script>
+        // カートからデータを取得して表示
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("/AsoEC/php/get_cart.php")
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        const summary = document.getElementById("checkout-summary");
+                        summary.innerHTML = `
+                            <h2>購入情報</h2>
+                            <p>カート内の商品情報は以下の通りです:</p>
+                            ${data.items.map(item => `
+                                <p>${item.name} × ${item.quantity} = ¥${(item.price * item.quantity).toLocaleString()}</p>
+                            `).join('')}
+                            <h2>合計金額</h2>
+                            <p><strong>¥${data.total_price.toLocaleString()}</strong></p>
+                        `;
+                    } else {
+                        alert(`エラー: ${data.message}`);
+                    }
+                })
+                .catch((error) => {
+                    console.error("通信エラー:", error);
+                    alert("カート情報の取得に失敗しました。");
+                });
+        });
+    </script>
+</body>
+</html>

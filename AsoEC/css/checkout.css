@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.checkout-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.checkout-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.checkout-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.name-group {
+    display: flex;
+    gap: 10px;
+}
+
+.name-group input {
+    flex: 1;
+}
+
+.payment-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background: #333;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECサイト</title>
+    <link rel="stylesheet" href="/AsoEC/css/merchandise.css">
+</head>
+<body>
+    <header class="navbar">
+        <button id="home-button" onclick="history.back()">ホームへ戻る</button>
+        <nav class="tabs">
+            <button class="tab category-tab" data-category="m">MAN</button>
+            <button class="tab category-tab" data-category="w">WOMEN</button>
+            <button class="tab category-tab" data-category="a">ACC</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">商品一覧</h1>
+        <div id="merchandise-grid" class="grid-container">
+            <!-- JavaScriptで商品アイテムが挿入されます -->
+        </div>
+    </main>
+
+    <script src="/AsoEC/js/merchandise.js"></script>
+</body>
+</html>

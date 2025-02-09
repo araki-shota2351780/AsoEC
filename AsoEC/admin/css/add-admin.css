@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    width: 70%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.preview-section {
+    width: 30%;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #0056b3;
+}
+
+.status-text {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+.home-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.home-image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.home-image:hover {
+    transform: scale(1.1);
+}
+
+.home-text {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #007BFF;
+    font-weight: bold;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT</title>
+    <link rel="stylesheet" href="/AsoEC/css/checkout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <header class="checkout-header">
+            <h1>CHECK OUT</h1>
+            <button class="close-btn" onclick="history.back()">×</button>
+        </header>
+        <main class="checkout-main">
+            <form id="checkout-form">
+                <section class="section">
+                    <h2>配達希望日時</h2>
+                    <input type="date" id="delivery-date" name="delivery_date" placeholder="ご希望の配達日">
+                    <input type="time" id="delivery-time" name="delivery_time" placeholder="ご希望の配達時間帯">
+                </section>
+                <section class="section">
+                    <h2>配達</h2>
+                    <div class="address-group">
+                        <input type="text" id="country" name="country" placeholder="国/地域">
+                        <div class="name-group">
+                            <input type="text" id="first-name" name="first_name" placeholder="姓">
+                            <input type="text" id="last-name" name="last_name" placeholder="名">
+                        </div>
+                        <input type="text" id="postal-code" name="postal_code" placeholder="郵便番号">
+                        <input type="text" id="prefecture" name="prefecture" placeholder="都道府県">
+                        <input type="text" id="city" name="city" placeholder="市区町村">
+                        <input type="text" id="address" name="address" placeholder="番地">
+                        <input type="text" id="building" name="building" placeholder="建物名、部屋番号など">
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>支払い</h2>
+                    <div class="payment-group">
+                        <label><input type="radio" name="payment_method" value="credit_card" required> クレジットカード</label>
+                        <label><input type="radio" name="payment_method" value="cash_on_delivery"> 代金引換（手数料: ¥330 税込）</label>
+                        <label><input type="radio" name="payment_method" value="convenience_store"> コンビニ（手数料: ¥330 税込）</label>
+                    </div>
+                </section>
+                <button type="submit" class="checkout-btn">続ける</button>
+            </form>
+        </main>
+    </div>
+    <script src="/AsoEC/js/checkout.js"></script>
+</body>
+</html>

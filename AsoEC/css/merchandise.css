@@ -1,0 +1,147 @@
+/* リセット */
+body, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ヘッダー */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+}
+
+.navbar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #777;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #007BFF;
+}
+
+.tab:hover {
+    background-color: #555;
+}
+
+/* サイズフィルタ */
+.size-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+}
+
+.size-filter {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.size-filter:hover {
+    background-color: #555;
+}
+
+.size-filter.active {
+    background-color: #007BFF;
+}
+
+/* グリッドコンテナ */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 横に3つずつ表示 */
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 商品アイテム */
+.merchandise-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.merchandise-item img {
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.merchandise-item h3 {
+    font-size: 10px;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.merchandise-item p {
+    font-size: 10px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.details-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 4px 6px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* スマートフォン向けの調整 */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* スマホでは横2列 */
+    }
+}

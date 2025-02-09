@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="/AsoEC/css/mypage.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>マイページ</h1>
+        </header>
+        <main>
+            <div id="user-info">
+                <p><strong>ユーザー名:</strong> <span id="username">ゲスト</span></p>
+                <p><strong>メールアドレス:</strong> <span id="email">guest@example.com</span></p>
+                <p><strong>登録日:</strong> <span id="created-at">未登録</span></p>
+            </div>
+
+            <!-- 更新フォーム -->
+            <form id="update-form" style="margin-top: 20px;">
+                <label for="new-username">新しいユーザー名:</label>
+                <input type="text" id="new-username" name="new-username">
+<br>
+                <label for="new-email">新しいメールアドレス:</label>
+                <input type="email" id="new-email" name="new-email">
+<br>
+                <button type="submit">更新する</button>
+            </form>
+
+            <div id="guest-register-link" style="display: none; margin-top: 20px;">
+                <p>ゲストでログインしています。ぜひ <a href="register.html">新規登録</a> をご検討ください！</p>
+            </div>
+        </main>
+
+        <footer>
+            <button id="logout" class="btn">ログアウト</button>
+            <button onclick="window.location.href='home.html'" class="btn back-button">ホームに戻る</button>
+        </footer>
+    </div>
+
+    <script src="/AsoEC/js/mypage.js"></script>
+</body>
+</html>

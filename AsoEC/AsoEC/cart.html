@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カート</title>
+    <link rel="stylesheet" href="/AsoEC/css/cart.css">
+</head>
+<body>
+    <div class="cart-container">
+        <header class="cart-header">
+            <h1>CART</h1>
+            <button class="close-btn" onclick="history.back()">×</button>
+        </header>
+        <main class="cart-items" id="cart-items">
+            <!-- カートアイテムがここに挿入されます -->
+        </main>
+        <footer class="cart-footer">
+            <div class="total-container">
+                <span>合計</span>
+                <span id="total-price">¥0</span>
+            </div>
+            <a href="/AsoEC/checkout.html" class="checkout-btn">続ける</a>
+
+        </footer>
+    </div>
+    <script src="/AsoEC/js/cart.js"></script>
+</body>
+</html>
